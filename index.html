@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tyler Shamblin — sports administration, coaching, and student-athlete development.">
+  <meta name="theme-color" content="#101820">
+  <title>Tyler Shamblin | Sports & Leadership Portfolio</title>
+  <style>
+    :root{--ink:#101820;--ink2:#182632;--paper:#f4f3ef;--white:#fff;--muted:#b7c1c8;--accent:#c44735;--accent2:#e6a18e;--line:rgba(255,255,255,.15);--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}button,a{ -webkit-tap-highlight-color:transparent}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(16,24,32,.95);backdrop-filter:blur(12px);color:white;border-bottom:1px solid var(--line)}
+    .navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:850;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;text-decoration:none}.brand span{color:var(--accent2)}
+    .links{display:flex;gap:24px;align-items:center}.links a{text-decoration:none;font-size:.88rem;color:#d7dfe3}.links a:hover{color:white}.menu{display:none;background:none;color:white;border:1px solid #56616a;border-radius:8px;padding:8px 12px}
+    .hero{background:var(--ink);color:white;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(230,161,142,.22);border-radius:50%;right:-110px;top:-170px;box-shadow:0 0 0 48px rgba(230,161,142,.035),0 0 0 100px rgba(230,161,142,.025);pointer-events:none}
+    .hero-grid{min-height:590px;display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center;padding-top:70px;padding-bottom:80px;position:relative;z-index:1}
+    .eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);font-weight:800}.hero h1{font-size:clamp(3.2rem,7vw,6.7rem);line-height:.96;letter-spacing:-.065em;margin:20px 0 24px;max-width:750px}.hero h1 em{font-style:normal;color:var(--accent2)}
+    .lead{font-size:1.15rem;color:#d4dce1;max-width:640px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:5px;font-weight:800;text-decoration:none;border:1px solid transparent;transition:.2s}.btn-primary{background:var(--accent);color:white}.btn-primary:hover{background:#a93627;transform:translateY(-2px)}.btn-ghost{border-color:#65717a;color:white}.btn-ghost:hover{border-color:white}
+    .hero-panel{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.035);padding:28px;position:relative}.hero-panel:before{content:"";height:5px;width:64px;background:var(--accent);position:absolute;top:-1px;left:28px}.panel-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800}.focus-list{list-style:none;margin:18px 0 0;padding:0}.focus-list li{padding:15px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-weight:700}.focus-list small{color:var(--accent2);font-weight:800}
+    section{padding:88px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:38px}.kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:900}.section-head h2{font-size:clamp(2.2rem,4vw,3.7rem);letter-spacing:-.05em;line-height:1.02;margin:10px 0 0}.section-head p{max-width:440px;color:#5c6870;margin:0}
+    .intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.intro-callout{font-size:1.45rem;line-height:1.35;font-weight:750;letter-spacing:-.025em;border-left:4px solid var(--accent);padding-left:24px}.body-copy{color:#4d5a62}.body-copy p:first-child{margin-top:0}
+    .pill-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.pill{border:1px solid #d3d5d3;border-radius:100px;padding:7px 12px;font-size:.78rem;font-weight:750;color:#33414a}
+    .dark-section{background:var(--ink);color:white}.dark-section .section-head p{color:#b7c1c8}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--ink2);border:1px solid var(--line);padding:26px;min-height:265px;position:relative;overflow:hidden}.card:after{content:attr(data-num);position:absolute;right:15px;bottom:-28px;font-size:8rem;font-weight:900;line-height:1;color:rgba(255,255,255,.035)}.card .num{color:var(--accent2);font-size:.75rem;font-weight:900;letter-spacing:.15em}.card h3{font-size:1.35rem;line-height:1.2;margin:20px 0 12px}.card p{color:#c0cbd1;font-size:.94rem;margin-bottom:0;position:relative;z-index:1}
+    .timeline{border-top:1px solid #d2d4d1}.job{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:26px 0;border-bottom:1px solid #d2d4d1}.job-date{font-size:.78rem;color:var(--accent);font-weight:900;letter-spacing:.08em;text-transform:uppercase}.job h3{margin:0 0 4px;font-size:1.22rem}.job .org{font-weight:750;color:#65717a;font-size:.9rem}.job ul{margin:12px 0 0;padding-left:20px;color:#4d5a62}.job li{padding:3px 0}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{background:white;border:1px solid #dedfdb;padding:25px;display:flex;flex-direction:column;min-height:285px}.project .tag{align-self:flex-start;background:#f7e5e0;color:#923b2f;padding:5px 9px;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900}.project h3{font-size:1.3rem;line-height:1.2;margin:20px 0 10px}.project p{color:#5c6870;font-size:.93rem}.project .note{margin-top:auto;border-top:1px solid #e6e6e2;padding-top:12px;color:#7b858a;font-size:.78rem}
+    .values{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#3a454d;border:1px solid #3a454d}.value{background:var(--ink);padding:24px}.value h3{margin:0 0 9px;color:var(--accent2);font-size:1.1rem}.value p{margin:0;color:#c0cbd1;font-size:.9rem}
+    .education-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.edu{background:white;padding:24px;border:1px solid #dedfdb}.edu .degree{font-weight:850;font-size:1.15rem}.edu .school{color:#65717a;margin-top:5px}.award{margin-top:20px;padding:24px;background:#f7e5e0;border-left:4px solid var(--accent)}.award strong{display:block;font-size:1.1rem}.award p{margin:6px 0 0;color:#67453f}
+    .contact{background:var(--accent);color:white}.contact .kicker{color:#ffe1d8}.contact .section-head h2{max-width:700px}.contact .section-head p{color:#ffe5df}.contact-row{display:flex;justify-content:space-between;gap:30px;align-items:center;border-top:1px solid rgba(255,255,255,.35);padding-top:25px}.contact-row a{font-weight:800;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.6);padding-bottom:3px}.contact-row a:hover{border-color:white}
+    footer{background:#0b1116;color:#aab4ba;padding:24px 0;font-size:.8rem}.footin{display:flex;justify-content:space-between;gap:20px}
+    .small-note{font-size:.8rem;color:#758087}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:35px;min-height:0}.hero-panel{max-width:600px}.intro-grid{grid-template-columns:1fr;gap:28px}.cards,.projects{grid-template-columns:1fr 1fr}.values{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column}.section-head p{max-width:650px}}
+    @media(max-width:620px){.wrap{width:min(100% - 28px,var(--max))}.navin{height:66px}.menu{display:block}.links{display:none;position:absolute;top:66px;left:0;right:0;background:var(--ink);padding:16px 22px 22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.hero-grid{padding-top:55px;padding-bottom:55px}.hero h1{font-size:clamp(3rem,16vw,5rem)}section{padding:62px 0}.cards,.projects,.education-grid{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:7px}.values{grid-template-columns:1fr 1fr}.contact-row,.footin{align-items:flex-start;flex-direction:column}.hero:after{right:-360px}.card{min-height:220px}}
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap navin">
+    <a class="brand" href="#home">TS<span>.</span> Portfolio</a>
+    <button class="menu" aria-label="Toggle navigation" aria-expanded="false" id="menuButton">Menu ☰</button>
+    <nav class="links" id="navLinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Sports · Leadership · Development</div>
+        <h1>Building better <em>people</em> and stronger programs.</h1>
+        <p class="lead">I’m Tyler Shamblin — a sports administration and business management graduate with experience across collegiate athletics, coaching, and student support. I’m driven by the opportunity to help people grow and contribute to organizations that make a lasting impact.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#experience">Explore my experience ↘</a>
+          <a class="btn btn-ghost" href="#contact">Connect with me</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <div class="panel-label">My professional focus</div>
+        <ul class="focus-list">
+          <li><span>Athletic administration</span><small>01</small></li>
+          <li><span>Coaching & player development</span><small>02</small></li>
+          <li><span>Recruiting & relationships</span><small>03</small></li>
+          <li><span>Student-centered leadership</span><small>04</small></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">01 / About</div><h2>A career built around<br>people and sport.</h2></div>
+        <p>My experience sits at the intersection of athletic operations, coaching, education, and relationship-building.</p>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-callout">I believe strong programs are built through preparation, accountability, communication, and a genuine investment in people.</div>
+        <div class="body-copy">
+          <p>With degrees in Sports Administration and Business Management from Oakland City University, I’ve developed a foundation in both the organizational and human sides of sport.</p>
+          <p>At Oakland City, I supported prospective student-athletes through enrollment and worked with coaches and staff to coordinate visits and recruiting events. Today, my work in education and high school coaching continues to strengthen my approach to individual development, teamwork, and creating environments where people can improve.</p>
+          <p>This portfolio is a living record of my experience, ideas, and professional growth across the sports industry.</p>
+          <div class="pill-row"><span class="pill">Relationship building</span><span class="pill">Program operations</span><span class="pill">Player development</span><span class="pill">Communication</span><span class="pill">Continuous learning</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section" id="expertise">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">02 / Expertise</div><h2>Multiple perspectives.<br>One team-first mindset.</h2></div>
+        <p>A broad sports-industry foundation built through administration, coaching, education, and hands-on team leadership.</p>
+      </div>
+      <div class="cards">
+        <article class="card" data-num="01"><div class="num">01 / OPERATIONS</div><h3>Athletic Administration</h3><p>Enrollment coordination, recruiting visits, event and game-day support, compliance tracking, budget support, and communication across departments.</p></article>
+        <article class="card" data-num="02"><div class="num">02 / DEVELOPMENT</div><h3>Coaching & Teaching</h3><p>Player development, position coaching, skill instruction, individualized support, and creating environments that encourage growth and accountability.</p></article>
+        <article class="card" data-num="03"><div class="num">03 / PEOPLE</div><h3>Leadership & Relationships</h3><p>Team coordination, employee training, relationship-building, group organization, and supporting people with different goals and needs.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">03 / Experience</div><h2>Where I’ve contributed.</h2></div>
+        <p>Selected responsibilities from my professional experience. This section can grow as I take on new roles and projects.</p>
+      </div>
+      <div class="timeline">
+        <article class="job"><div class="job-date">Aug 2025 – Present</div><div><h3>Varsity Assistant & JV Baseball Head Coach</h3><div class="org">Bellefontaine High School · Bellefontaine, Ohio</div><ul><li>Develop young players toward varsity-level readiness.</li><li>Teach the mental side of baseball and reinforce preparation and resilience.</li><li>Help create a tough, growth-oriented, winning culture.</li></ul></div></article>
+        <article class="job"><div class="job-date">Aug 2025 – Present</div><div><h3>Varsity & JV Football Assistant</h3><div class="org">Bellefontaine High School · Bellefontaine, Ohio</div><ul><li>Coach the H position and support players’ physical and mental development.</li><li>Call coverages for the JV secondary.</li><li>Support strength and explosiveness training and a culture of honesty and growth.</li></ul></div></article>
+        <article class="job"><div class="job-date">Aug 2025 – Present</div><div><h3>Intervention Specialist</h3><div class="org">Bellefontaine City Schools · Bellefontaine, Ohio</div><ul><li>Provide one-to-one and group instruction.</li><li>Support student behavior and classroom needs.</li><li>Adapt support to help students participate and progress.</li></ul></div></article>
+        <article class="job"><div class="job-date">Mar 2022 – Jul 2025</div><div><h3>Enrollment Counselor / Athletic Liaison</h3><div class="org">Oakland City University · Oakland City, Indiana</div><ul><li>Collaborated with athletic departments to support student-athlete enrollment.</li><li>Guided prospective student-athletes through admissions and program information.</li><li>Coordinated with coaches and staff on university policies, campus visits, and recruiting events.</li></ul></div></article>
+        <article class="job"><div class="job-date">Nov 2021 – Mar 2022</div><div><h3>Team Coordinator</h3><div class="org">Dunham’s Sports · Bellefontaine, Ohio</div><ul><li>Managed team schedules and delegated daily responsibilities.</li><li>Supported inventory, merchandising, and customer service.</li><li>Trained and mentored new team members.</li></ul></div></article>
+        <article class="job"><div class="job-date">Jun 2021 – Nov 2021</div><div><h3>Camp Counselor, Summer Sports</h3><div class="org">Ripken · Aberdeen, Maryland</div><ul><li>Guided young athletes through baseball drills, skill development, and team-building activities.</li><li>Helped maintain a safe, supportive environment and organized daily camp activities.</li></ul></div></article>
+        <article class="job"><div class="job-date">Aug 2019 – Jan 2020</div><div><h3>Athletic Director Intern</h3><div class="org">Oakland City University · Oakland City, Indiana</div><ul><li>Assisted with athletic events and game-day operations.</li><li>Supported compliance tracking, athletic budget management, facilities, and equipment.</li><li>Coordinated communication between departments and external organizations.</li></ul></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="background:#e9e9e4">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">04 / Work Samples</div><h2>Show the work.<br>Share the thinking.</h2></div>
+        <p>These are proposed portfolio projects to build next—not claims of completed work. Each can become a downloadable sample or case study.</p>
+      </div>
+      <div class="projects">
+        <article class="project"><span class="tag">Project concept</span><h3>Player Development Blueprint</h3><p>A sample baseball development plan with skill priorities, practice structure, measurable goals, and reflection checkpoints.</p><div class="note">Potential focus: coaching · development · evaluation</div></article>
+        <article class="project"><span class="tag">Project concept</span><h3>Game-Day Operations Plan</h3><p>A sample event operations checklist covering timelines, staffing, facilities, communication, contingencies, and post-event review.</p><div class="note">Potential focus: administration · logistics · execution</div></article>
+        <article class="project"><span class="tag">Project concept</span><h3>Recruiting & Visit Workflow</h3><p>A sample prospective-student-athlete visit journey showing coordination among admissions, coaches, campus partners, and the recruit.</p><div class="note">Potential focus: recruiting · communication · service</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section" id="leadership">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">05 / Leadership</div><h2>How I want to lead.</h2></div>
+        <p>My approach is grounded in service, steady improvement, and creating a standard people can trust.</p>
+      </div>
+      <div class="values">
+        <article class="value"><h3>Character</h3><p>Act with integrity and respect, whether competing, coaching, or working behind the scenes.</p></article>
+        <article class="value"><h3>Accountability</h3><p>Set clear expectations, prepare with purpose, and take responsibility for the work.</p></article>
+        <article class="value"><h3>Development</h3><p>Meet people where they are and help them take the next step forward.</p></article>
+        <article class="value"><h3>Teamwork</h3><p>Build trust through communication, consistency, and shared commitment.</p></article>
+      </div>
+      <div class="education-grid" style="margin-top:36px">
+        <article class="edu"><div class="kicker">Education</div><div class="degree">Bachelor of Science · Sports Administration</div><div class="school">Oakland City University · 2021</div></article>
+        <article class="edu"><div class="kicker">Education</div><div class="degree">Bachelor of Science · Business Management</div><div class="school">Oakland City University · 2021</div></article>
+      </div>
+      <div class="award"><strong>River States Conference — Champion of Character</strong><p>May 2021 · According to my resume, this recognition was voted on by conference coaches and reflected the qualities of a strong teammate, player, and opponent.</p></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">06 / Contact</div><h2>Let’s build something that matters.</h2></div>
+        <p>Open to connecting with people and organizations across the sports industry, education, coaching, and athletic administration.</p>
+      </div>
+      <div class="contact-row">
+        <div><div style="font-weight:900;font-size:1.2rem">Tyler Shamblin</div><div>Sports · Leadership · Development</div></div>
+        <div><a href="mailto:tylershamblin2120@gmail.com">tylershamblin2120@gmail.com</a></div>
+      </div>
+      <p class="small-note" style="color:#ffe5df;margin-top:20px">Before publishing publicly, confirm the contact details you want displayed and add your LinkedIn profile if you have one.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footin"><span>© <span id="year"></span> Tyler Shamblin · Professional Portfolio</span><span>Built around sport, service, and growth.</span></div></footer>
+<script>
+  const button = document.getElementById('menuButton');
+  const links = document.getElementById('navLinks');
+  button.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    button.setAttribute('aria-expanded', String(isOpen));
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open'); button.setAttribute('aria-expanded','false');
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
